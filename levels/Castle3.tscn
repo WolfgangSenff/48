@@ -1,0 +1,154 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://StairsExit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Root.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/tilesets/castle_interior_background.png" type="Texture" id=3]
+[ext_resource path="res://enemies/NakedVoleRat.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enemies/DaBrick.tscn" type="PackedScene" id=5]
+
+[node name="Castle3" instance=ExtResource( 2 )]
+IsFirstLevel = false
+
+[node name="Position2D" type="Position2D" parent="StartingPositions" index="0"]
+position = Vector2( -108.735, 261.189 )
+
+[node name="Position2D2" type="Position2D" parent="StartingPositions" index="1"]
+position = Vector2( -69.5009, 260.628 )
+
+[node name="Position2D3" type="Position2D" parent="StartingPositions" index="2"]
+position = Vector2( -36.9924, 260.909 )
+
+[node name="Position2D4" type="Position2D" parent="StartingPositions" index="3"]
+position = Vector2( -2.24197, 261.749 )
+
+[node name="Position2D5" type="Position2D" parent="StartingPositions" index="4"]
+position = Vector2( 38.1134, 261.749 )
+
+[node name="Position2D" type="Position2D" parent="EnemyStartingPositions" index="0"]
+position = Vector2( 116.862, 18.7764 )
+
+[node name="Position2D3" type="Position2D" parent="EnemyStartingPositions" index="1"]
+position = Vector2( 87.9413, 18.5087 )
+
+[node name="Position2D4" type="Position2D" parent="EnemyStartingPositions" index="2"]
+position = Vector2( 59.8235, 19.5798 )
+
+[node name="Position2D5" type="Position2D" parent="EnemyStartingPositions" index="3"]
+position = Vector2( -112.096, 13.1529 )
+
+[node name="Position2D6" type="Position2D" parent="EnemyStartingPositions" index="4"]
+position = Vector2( -69.5181, 12.8851 )
+
+[node name="Position2D7" type="Position2D" parent="EnemyStartingPositions" index="5"]
+position = Vector2( -29.3499, 13.1529 )
+
+[node name="Position2D8" type="Position2D" parent="EnemyStartingPositions" index="6"]
+position = Vector2( 0.106827, 12.8851 )
+
+[node name="Position2D9" type="Position2D" parent="EnemyStartingPositions" index="7"]
+position = Vector2( -109.151, 42.6096 )
+
+[node name="Position2D10" type="Position2D" parent="EnemyStartingPositions" index="8"]
+position = Vector2( -73.8027, 43.6807 )
+
+[node name="Position2D11" type="Position2D" parent="EnemyStartingPositions" index="9"]
+position = Vector2( -37.1157, 43.9485 )
+
+[node name="Position2D12" type="Position2D" parent="EnemyStartingPositions" index="10"]
+position = Vector2( -0.160965, 44.4841 )
+
+[node name="Position2D13" type="Position2D" parent="EnemyStartingPositions" index="11"]
+position = Vector2( 34.3837, 47.4297 )
+
+[node name="Position2D14" type="Position2D" parent="EnemyStartingPositions" index="12"]
+position = Vector2( 73.213, 49.8398 )
+
+[node name="Position2D15" type="Position2D" parent="EnemyStartingPositions" index="13"]
+position = Vector2( 106.419, 51.4465 )
+
+[node name="Position2D16" type="Position2D" parent="EnemyStartingPositions" index="14"]
+position = Vector2( -110.222, 75.0119 )
+
+[node name="Position2D17" type="Position2D" parent="EnemyStartingPositions" index="15"]
+position = Vector2( -109.686, 102.862 )
+
+[node name="Position2D18" type="Position2D" parent="EnemyStartingPositions" index="16"]
+position = Vector2( 80.1755, 131.515 )
+
+[node name="Position2D19" type="Position2D" parent="EnemyStartingPositions" index="17"]
+position = Vector2( 110.168, 132.854 )
+
+[node name="Position2D20" type="Position2D" parent="EnemyStartingPositions" index="18"]
+position = Vector2( 138.553, 132.854 )
+
+[node name="Position2D21" type="Position2D" parent="EnemyStartingPositions" index="19"]
+position = Vector2( -82.1041, 128.837 )
+
+[node name="Position2D22" type="Position2D" parent="EnemyStartingPositions" index="20"]
+position = Vector2( -29.6176, 129.373 )
+
+[node name="Position2D23" type="Position2D" parent="EnemyStartingPositions" index="21"]
+position = Vector2( 12.6929, 128.57 )
+
+[node name="Position2D24" type="Position2D" parent="EnemyStartingPositions" index="22"]
+position = Vector2( -110.222, 157.223 )
+
+[node name="Position2D25" type="Position2D" parent="EnemyStartingPositions" index="23"]
+position = Vector2( 8.94388, 158.562 )
+
+[node name="Position2D2" type="Position2D" parent="EnemyStartingPositions" index="24"]
+position = Vector2( 146.849, 18.216 )
+
+[node name="Position2D26" type="Position2D" parent="EnemyStartingPositions" index="25"]
+position = Vector2( 136.405, 264.045 )
+
+[node name="Position2D27" type="Position2D" parent="EnemyStartingPositions" index="26"]
+position = Vector2( 138.012, 233.518 )
+
+[node name="Position2D28" type="Position2D" parent="EnemyStartingPositions" index="27"]
+position = Vector2( 138.815, 202.99 )
+
+[node name="Position2D29" type="Position2D" parent="EnemyStartingPositions" index="28"]
+position = Vector2( 137.476, 166.838 )
+
+[node name="Environment" parent="." index="2"]
+tile_data = PoolIntArray( -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -131070, 1, 0, -131069, 1, 0, -65534, 1, 0, 65532, 10, 0, 65533, 10, 0, 65534, 10, 0, 65535, 10, 0, 0, 10, 0, 1, 10, 0, 2, 10, 0, 3, 10, 0, 4, 10, 0, 131068, 10, 0, 131069, 10, 0, 131070, 10, 0, 131071, 10, 0, 65536, 10, 0, 65537, 10, 0, 65538, 10, 0, 65539, 10, 0, 65540, 10, 0, 196604, 10, 0, 196605, 10, 0, 196606, 10, 0, 196607, 10, 0, 131072, 10, 0, 131073, 10, 0, 131074, 10, 0, 131075, 10, 0, 131076, 10, 0, 262140, 10, 0, 262141, 10, 0, 327676, 10, 0, 327677, 10, 0, 327678, 10, 0, 327679, 10, 0, 262144, 10, 0, 262145, 10, 0, 262146, 10, 0, 262147, 10, 0, 262148, 10, 0, 262150, 1, 0, 393212, 10, 0, 393213, 10, 0, 393214, 10, 0, 393215, 10, 0, 327680, 10, 0, 327681, 10, 0, 327682, 10, 0, 327683, 10, 0, 327684, 10, 0, 327685, 1, 0, 327686, 1, 0, 458748, 10, 0, 458749, 10, 0, 458750, 10, 0, 458751, 10, 0, 393216, 10, 0, 393217, 10, 0, 393218, 10, 0, 393219, 10, 0, 393220, 10, 0, 393222, 1, 0, 458755, 10, 0, 458756, 10, 0, 458757, 1, 0, 524291, 10, 0, 524292, 10, 0, 524293, 1, 0, 655356, 10, 0, 655357, 10, 0, 655358, 10, 0, 655359, 10, 0, 589824, 10, 0, 589825, 10, 0, 589826, 10, 0, 589827, 10, 0, 589828, 10, 0, 720892, 10, 0, 720893, 10, 0, 720894, 10, 0, 720895, 10, 0, 655360, 10, 0, 655361, 10, 0, 655362, 10, 0, 655363, 10, 0, 655364, 10, 0, 786428, 10, 0, 786429, 10, 0, 786430, 10, 0, 786431, 10, 0, 720896, 10, 0, 720897, 10, 0, 720898, 10, 0, 720899, 10, 0, 720900, 10, 0, 917503, 3, 0, 917504, 3, 0 )
+
+[node name="StairsExit" parent="." index="3" instance=ExtResource( 1 )]
+position = Vector2( 144.695, 58.4881 )
+
+[node name="TextureRect" parent="." index="5"]
+texture = ExtResource( 3 )
+
+[node name="Player" parent="Characters" index="0"]
+position = Vector2( -108.973, 259.195 )
+
+[node name="NakedVoleRat" parent="Characters" index="1" instance=ExtResource( 4 )]
+position = Vector2( 144.512, 18.4655 )
+
+[node name="NakedVoleRat2" parent="Characters" index="2" instance=ExtResource( 4 )]
+position = Vector2( 115.877, 18.7331 )
+
+[node name="NakedVoleRat3" parent="Characters" index="3" instance=ExtResource( 4 )]
+position = Vector2( 86.7074, 18.4654 )
+
+[node name="NakedVoleRat4" parent="Characters" index="4" instance=ExtResource( 4 )]
+position = Vector2( 60.2135, 18.7331 )
+
+[node name="NakedVoleRat5" parent="Characters" index="5" instance=ExtResource( 4 )]
+position = Vector2( 139.963, 133.808 )
+
+[node name="NakedVoleRat6" parent="Characters" index="6" instance=ExtResource( 4 )]
+position = Vector2( 110.793, 133.272 )
+
+[node name="NakedVoleRat7" parent="Characters" index="7" instance=ExtResource( 4 )]
+position = Vector2( 79.2142, 132.47 )
+
+[node name="DaBrick" parent="Characters" index="8" instance=ExtResource( 5 )]
+position = Vector2( -110.774, 12.3981 )
+
+[node name="DaBrick2" parent="Characters" index="9" instance=ExtResource( 5 )]
+position = Vector2( -111.044, 156.324 )
+
+[node name="DaBrick3" parent="Characters" index="10" instance=ExtResource( 5 )]
+position = Vector2( 136.918, 263.864 )

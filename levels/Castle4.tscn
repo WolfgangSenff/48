@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://enemies/DaBrick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enemies/Goldigger.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Root.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/tilesets/castle_interior_background.png" type="Texture" id=4]
+[ext_resource path="res://HoleExit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://enemies/NakedVoleRat.tscn" type="PackedScene" id=6]
+
+[node name="Castle4" instance=ExtResource( 3 )]
+IsFirstLevel = false
+
+[node name="Position2D" type="Position2D" parent="StartingPositions" index="0"]
+position = Vector2( -112.896, 261.715 )
+
+[node name="Position2D2" type="Position2D" parent="StartingPositions" index="1"]
+position = Vector2( -77.1801, 262.946 )
+
+[node name="Position2D3" type="Position2D" parent="StartingPositions" index="2"]
+position = Vector2( -32.4321, 262.125 )
+
+[node name="Position2D4" type="Position2D" parent="StartingPositions" index="3"]
+position = Vector2( 9.85281, 261.304 )
+
+[node name="Position2D5" type="Position2D" parent="StartingPositions" index="4"]
+position = Vector2( 41.8744, 263.562 )
+
+[node name="Position2D6" type="Position2D" parent="StartingPositions" index="5"]
+position = Vector2( 69.9958, 264.178 )
+
+[node name="Position2D7" type="Position2D" parent="StartingPositions" index="6"]
+position = Vector2( 93.8068, 264.793 )
+
+[node name="Position2D8" type="Position2D" parent="StartingPositions" index="7"]
+position = Vector2( -11.2896, 195.208 )
+
+[node name="Position2D9" type="Position2D" parent="StartingPositions" index="8"]
+position = Vector2( 37.9743, 196.235 )
+
+[node name="Position2D" type="Position2D" parent="EnemyStartingPositions" index="0"]
+position = Vector2( -110.844, 44.3375 )
+
+[node name="Position2D2" type="Position2D" parent="EnemyStartingPositions" index="1"]
+position = Vector2( -11.7002, 51.7271 )
+
+[node name="Position2D3" type="Position2D" parent="EnemyStartingPositions" index="2"]
+position = Vector2( 41.8743, 53.5745 )
+
+[node name="Position2D4" type="Position2D" parent="EnemyStartingPositions" index="3"]
+position = Vector2( 147.792, 48.4428 )
+
+[node name="Position2D5" type="Position2D" parent="EnemyStartingPositions" index="4"]
+position = Vector2( 113.718, 116.181 )
+
+[node name="Position2D6" type="Position2D" parent="EnemyStartingPositions" index="5"]
+position = Vector2( 17.6529, 86.4171 )
+
+[node name="Position2D7" type="Position2D" parent="EnemyStartingPositions" index="6"]
+position = Vector2( -111.46, 114.744 )
+
+[node name="Position2D8" type="Position2D" parent="EnemyStartingPositions" index="7"]
+position = Vector2( -111.049, 90.5224 )
+
+[node name="Position2D9" type="Position2D" parent="EnemyStartingPositions" index="8"]
+position = Vector2( -6.56854, 95.0383 )
+
+[node name="Position2D10" type="Position2D" parent="EnemyStartingPositions" index="9"]
+position = Vector2( 42.6954, 96.2699 )
+
+[node name="Position2D11" type="Position2D" parent="EnemyStartingPositions" index="10"]
+position = Vector2( 144.097, 96.0646 )
+
+[node name="Position2D12" type="Position2D" parent="EnemyStartingPositions" index="11"]
+position = Vector2( 145.739, 125.007 )
+
+[node name="Position2D13" type="Position2D" parent="EnemyStartingPositions" index="12"]
+position = Vector2( -82.1066, 117.207 )
+
+[node name="Environment" parent="." index="2"]
+tile_data = PoolIntArray( -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -131070, 1, 0, -131069, 1, 0, -65534, 1, 0, 131068, 10, 0, 131069, 10, 0, 131070, 10, 0, 131071, 10, 0, 65536, 10, 0, 65537, 10, 0, 65538, 10, 0, 65539, 10, 0, 65540, 10, 0, 196604, 10, 0, 196607, 10, 0, 131072, 10, 0, 131073, 10, 0, 131076, 10, 0, 262140, 10, 0, 262141, 10, 0, 262143, 10, 0, 196608, 10, 0, 196609, 10, 0, 196611, 10, 0, 196612, 10, 0, 327676, 10, 0, 327677, 10, 0, 327679, 10, 0, 262144, 10, 0, 262145, 10, 0, 262147, 10, 0, 262148, 10, 0, 262150, 1, 0, 393212, 10, 0, 393213, 10, 0, 393215, 10, 0, 327680, 10, 0, 327681, 10, 0, 327683, 10, 0, 327684, 10, 0, 327685, 1, 0, 327686, 1, 0, 458748, 10, 0, 458749, 10, 0, 458751, 10, 0, 393216, 10, 0, 393217, 10, 0, 393219, 10, 0, 393220, 10, 0, 393222, 1, 0, 524284, 10, 0, 524285, 10, 0, 524287, 10, 0, 458752, 10, 0, 458753, 10, 0, 458755, 10, 0, 458756, 10, 0, 458757, 1, 0, 589820, 10, 0, 589821, 10, 0, 589823, 10, 0, 524288, 10, 0, 524289, 10, 0, 524291, 10, 0, 524292, 10, 0, 524293, 1, 0, 655356, 10, 0, 655359, 10, 0, 589824, 10, 0, 589827, 10, 0, 589828, 10, 0, 720892, 10, 0, 720893, 10, 0, 720894, 10, 0, 720895, 10, 0, 655360, 10, 0, 655361, 10, 0, 655362, 10, 0, 655363, 10, 0, 917503, 3, 0, 917504, 3, 0 )
+
+[node name="HoleExit" parent="." index="3" instance=ExtResource( 5 )]
+position = Vector2( -78.6355, 91.3919 )
+
+[node name="HoleExit2" parent="." index="4" instance=ExtResource( 5 )]
+position = Vector2( 13.0394, 40.7921 )
+
+[node name="HoleExit3" parent="." index="5" instance=ExtResource( 5 )]
+position = Vector2( 112.453, 91.3919 )
+
+[node name="TextureRect" parent="." index="7"]
+texture = ExtResource( 4 )
+
+[node name="Goldigger" parent="Characters" index="1" instance=ExtResource( 2 )]
+position = Vector2( -110.969, 43.0702 )
+
+[node name="Goldigger2" parent="Characters" index="2" instance=ExtResource( 2 )]
+position = Vector2( 145.425, 46.6172 )
+
+[node name="NakedVoleRat" parent="Characters" index="3" instance=ExtResource( 6 )]
+position = Vector2( -11.6543, 52.6977 )
+
+[node name="DaBrick" parent="Characters" index="4" instance=ExtResource( 1 )]
+position = Vector2( 41.0434, 54.2178 )

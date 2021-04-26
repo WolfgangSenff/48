@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/gui/AbilityButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/gui/Boostx2Button.gd" type="Script" id=2]
+
+[node name="Boostx2Button" instance=ExtResource( 1 )]
+text = "Boost x2"
+script = ExtResource( 2 )
+AbilityResource = "Boostx2"

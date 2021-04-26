@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SuperNova.gd" type="Script" id=1]
+
+[node name="SuperNova" type="Node2D" groups=[
+"ActionUser",
+]]
+script = ExtResource( 1 )
+AbilityName = "SuperNova"
+AbilityDamage = 1
+OnlyEnemies = true
+AbilityResource = "SuperNova"

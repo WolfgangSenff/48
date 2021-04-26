@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/gui/AbilityButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/gui/MaxHealthButton.gd" type="Script" id=3]
+
+[node name="MaxHealthButton" instance=ExtResource( 1 )]
+text = "Max HP"
+script = ExtResource( 3 )
+AbilityResource = "MaxHealth"

@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Ability.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/abilities/flames-sheet.png" type="Texture" id=2]
+[ext_resource path="res://PermaFire.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+[node name="PermaFire" instance=ExtResource( 1 )]
+visible = false
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 3 )
+AbilityName = "PermaFire"
+AbilityDamage = 3
+OnlyEnemies = true
+AbilityResource = "PermaFire"
+ShouldAnnounce = true
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 6 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="." to="." method="_on_PermaFire_body_entered"]

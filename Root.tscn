@@ -1,0 +1,204 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/tilesets/environment_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://ActionsLabel.gd" type="Script" id=2]
+[ext_resource path="res://assets/gui/AnnouncementLabel.gd" type="Script" id=3]
+[ext_resource path="res://assets/gui/OpenDyslexic3-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Root.gd" type="Script" id=5]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://LevelUp.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/gui/hp_progress-under.png" type="Texture" id=9]
+[ext_resource path="res://assets/gui/IceStorm.tscn" type="PackedScene" id=10]
+[ext_resource path="res://SuperNova.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Highlights.gd" type="Script" id=13]
+[ext_resource path="res://GUI.gd" type="Script" id=14]
+[ext_resource path="res://Environment.gd" type="Script" id=16]
+[ext_resource path="res://assets/gui/hp_progress.png" type="Texture" id=19]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 5 )
+IsFirstLevel = true
+
+[node name="StartingPositions" type="Node2D" parent="."]
+
+[node name="EnemyStartingPositions" type="Node2D" parent="."]
+
+[node name="Environment" type="TileMap" parent="." groups=[
+"Movement",
+]]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 25 )
+cell_y_sort = true
+collision_layer = 16
+format = 1
+tile_data = PoolIntArray( -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -131070, 1, 0, -131069, 1, 0, -65534, 1, 0, 262150, 1, 0, 327685, 1, 0, 327686, 1, 0, 393222, 1, 0, 458757, 1, 0, 524293, 1, 0, 917503, 3, 0, 917504, 3, 0 )
+script = ExtResource( 16 )
+
+[node name="Highlights" type="TileMap" parent="Environment" groups=[
+"Highlights",
+]]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 25 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -65534, 1, 0, 2, 1, 0, 196614, 1, 0, 262150, 1, 0, 327684, 1, 0, 458751, 3, 0, 524286, 1, 0, 524287, 3, 0, 458755, 1, 0, 524293, 1, 0, 589828, 1, 0, 655364, 1, 0, 720899, 1, 0 )
+script = ExtResource( 13 )
+PlayerPath = NodePath("../../Characters/Player")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 16.8168, 111.212 )
+current = true
+
+[node name="ScreenCenter" type="Position2D" parent="Camera2D" groups=[
+"ScreenCenter",
+]]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -173.173
+margin_top = -99.4057
+margin_right = 206.827
+margin_bottom = 320.594
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Characters" type="YSort" parent="."]
+
+[node name="Player" parent="Characters" instance=ExtResource( 6 )]
+position = Vector2( 10.1568, 267.55 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = SubResource( 2 )
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Root" type="Control" parent="CanvasLayer/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 370.0
+margin_bottom = 410.0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/Root"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -27.0
+mouse_filter = 2
+custom_constants/separation = 8
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HPProgress" type="TextureProgress" parent="CanvasLayer/MarginContainer/Root"]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnnouncementLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/Root"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -100.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 200, 40 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_active = false
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="CanvasLayer/MarginContainer/Root/AnnouncementLabel"]
+
+[node name="Actions" type="VSplitContainer" parent="CanvasLayer/MarginContainer/Root"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -120.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/Root/Actions"]
+margin_right = 120.0
+margin_bottom = 21.0
+text = "Actions remaining:"
+align = 1
+
+[node name="ActionsLabel" type="Label" parent="CanvasLayer/MarginContainer/Root/Actions" groups=[
+"ActionHandler",
+]]
+margin_top = 33.0
+margin_right = 120.0
+margin_bottom = 54.0
+align = 1
+script = ExtResource( 2 )
+
+[node name="LevelUpPopup" type="Popup" parent="CanvasLayer"]
+pause_mode = 2
+anchor_right = 0.742
+anchor_bottom = 0.39
+margin_right = 0.039978
+margin_bottom = 0.199997
+mouse_filter = 2
+popup_exclusive = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelUp" parent="CanvasLayer/LevelUpPopup" instance=ExtResource( 8 )]
+mouse_filter = 2
+
+[node name="AbilitiesLayer" type="CanvasLayer" parent="."]
+
+[node name="GlobalAbilities" type="Node2D" parent="AbilitiesLayer"]
+
+[node name="IceStorm" parent="AbilitiesLayer/GlobalAbilities" groups=[
+"Ability",
+] instance=ExtResource( 10 )]
+position = Vector2( 106.158, -1.8624 )
+
+[node name="SuperNova" parent="AbilitiesLayer/GlobalAbilities" groups=[
+"Ability",
+] instance=ExtResource( 12 )]
+
+[node name="LevelStarter" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="LevelStarter" to="." method="_on_LevelStarter_timeout" flags=7]

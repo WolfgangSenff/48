@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/gui/AbilityButton.tscn" type="PackedScene" id=2]
+
+[node name="EndTurnButton" instance=ExtResource( 2 )]
+text = "End"
+AbilityResource = "EndTurn"
